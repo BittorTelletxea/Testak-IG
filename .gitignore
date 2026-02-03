@@ -1,0 +1,19 @@
+[Bb]in/
+[Ob]j/
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Rider / VSCode / JetBrains
+.idea/
+.vscode/
+
+# Secrets
+*.json
+secrets.json
+
+obj/\nbin/\n*.json
