@@ -12,8 +12,6 @@ obj/
 .idea/
 .vscode/
 
-# Secrets
-*.json
-secrets.json
+
 
 obj/\nbin/\n*.json
