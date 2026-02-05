@@ -2,30 +2,29 @@ name: .NET Tests
 
 on:
   push:
-    branches: ["**"]
+    branches:
+      - "**"
   pull_request:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   build-and-test:
-    # WPF requiere Windows, Linux (ubuntu-latest) fallará siempre
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 9.0.x
 
-      - name: Restore dependencies
-        # Apuntamos a la carpeta donde está el .sln realmente
-        run: dotnet restore MusRoyalePC/MusRoyalePC.sln
+      - name: Restore
+        run: dotnet restore MusRoyalePC.sln
 
       - name: Build
-        run: dotnet build MusRoyalePC/MusRoyalePC.sln --no-restore --configuration Debug
+        run: dotnet build MusRoyalePC.sln --no-restore
 
-      - name: Run Tests
-        # Ejecutamos los tests a través de la solución
-        run: dotnet test MusRoyalePC/MusRoyalePC.sln --no-build --verbosity normal
+      - name: Test
+        run: dotnet test MusRoyalePC.sln --no-build
