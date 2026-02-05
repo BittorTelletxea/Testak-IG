@@ -22,10 +22,11 @@ jobs:
           dotnet-version: 9.0.x
 
       - name: Restore
-        run: dotnet restore
+        # Buscamos recursivamente cualquier archivo de proyecto/solución
+        run: dotnet restore **/*.csproj
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build **/*.csproj --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --configuration Release --no-build --verbosity normal
+        run: dotnet test **/*.csproj --configuration Release --no-build
