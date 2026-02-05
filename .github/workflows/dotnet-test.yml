@@ -21,14 +21,19 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
-      - name: Restore dependencies
-        run: dotnet restore
-        # Restauramos desde la raíz para que encuentre ambos proyectos
+      - name: Restore & Build Main Project
+        run: |
+          cd MusRoyalePC
+          dotnet restore
+          dotnet build --configuration Release --no-restore
 
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+      - name: Restore & Build Tests
+        run: |
+          cd MusRoyalePC.Tests
+          dotnet restore
+          dotnet build --configuration Release --no-restore
 
       - name: Run Tests
-        # Aquí le decimos específicamente dónde trabajar
-        working-directory: ./MusRoyalePC.Tests
-        run: dotnet test --configuration Release --no-build --verbosity normal
+        run: |
+          cd MusRoyalePC.Tests
+          dotnet test --configuration Release --no-build --verbosity normal
