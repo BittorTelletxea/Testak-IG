@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xHBWIiAqFHc=",
+  "dgSpecHash": "zWO/2eNfTTo=",
   "success": true,
-  "projectFilePath": "D:\\MusRoyalePC\\MusRoyalePC.Tests\\MusRoyalePC.Tests.csproj",
+  "projectFilePath": "D:\\Testak-IG\\MusRoyalePC.Tests\\MusRoyalePC.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ik012982i18\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\ik012982i18\\.nuget\\packages\\google.api.commonprotos\\2.17.0\\google.api.commonprotos.2.17.0.nupkg.sha512",

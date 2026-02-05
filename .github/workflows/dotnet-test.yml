@@ -21,12 +21,14 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
-      - name: Restore
-        # Buscamos recursivamente cualquier archivo de proyecto/solución
-        run: dotnet restore **/*.csproj
+      - name: Restore dependencies
+        run: dotnet restore
+        # Restauramos desde la raíz para que encuentre ambos proyectos
 
       - name: Build
-        run: dotnet build **/*.csproj --configuration Release --no-restore
+        run: dotnet build --configuration Release --no-restore
 
-      - name: Test
-        run: dotnet test **/*.csproj --configuration Release --no-build
+      - name: Run Tests
+        # Aquí le decimos específicamente dónde trabajar
+        working-directory: ./MusRoyalePC.Tests
+        run: dotnet test --configuration Release --no-build --verbosity normal

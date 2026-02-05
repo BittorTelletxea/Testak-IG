@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MusRoyalePC\\MusRoyalePC\\MusRoyalePC.csproj": {}
+    "D:\\Testak-IG\\MusRoyalePC\\MusRoyalePC.csproj": {}
   },
   "projects": {
-    "D:\\MusRoyalePC\\MusRoyalePC\\MusRoyalePC.csproj": {
+    "D:\\Testak-IG\\MusRoyalePC\\MusRoyalePC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MusRoyalePC\\MusRoyalePC\\MusRoyalePC.csproj",
+        "projectUniqueName": "D:\\Testak-IG\\MusRoyalePC\\MusRoyalePC.csproj",
         "projectName": "MusRoyalePC",
-        "projectPath": "D:\\MusRoyalePC\\MusRoyalePC\\MusRoyalePC.csproj",
+        "projectPath": "D:\\Testak-IG\\MusRoyalePC\\MusRoyalePC.csproj",
         "packagesPath": "C:\\Users\\ik012982i18\\.nuget\\packages\\",
-        "outputPath": "D:\\MusRoyalePC\\MusRoyalePC\\obj\\",
+        "outputPath": "D:\\Testak-IG\\MusRoyalePC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
