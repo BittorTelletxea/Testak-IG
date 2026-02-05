@@ -10,7 +10,8 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    # Cambiamos Ubuntu por Windows para que soporte el targeting de Windows
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
@@ -21,19 +22,15 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
-      - name: Restore & Build Main Project
+      - name: Restore & Build
+        # En Windows, 'dotnet build' en la raíz suele funcionar mejor
+        # si hay un archivo de solución, pero mantendremos el comando simple
         run: |
-          cd MusRoyalePC
-          dotnet restore
-          dotnet build --configuration Release --no-restore
-
-      - name: Restore & Build Tests
-        run: |
-          cd MusRoyalePC.Tests
           dotnet restore
           dotnet build --configuration Release --no-restore
 
       - name: Run Tests
+        shell: pwsh
         run: |
           cd MusRoyalePC.Tests
           dotnet test --configuration Release --no-build --verbosity normal
