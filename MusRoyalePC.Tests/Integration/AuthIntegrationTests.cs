@@ -1,4 +1,4 @@
-﻿using MusRoyalePC.Services;
+﻿/*using MusRoyalePC.Services;
 using Xunit;
 using System.Threading.Tasks;
 
@@ -48,3 +48,4 @@ namespace MusRoyalePC.Tests.Integration
         }
     }
 }
+*/

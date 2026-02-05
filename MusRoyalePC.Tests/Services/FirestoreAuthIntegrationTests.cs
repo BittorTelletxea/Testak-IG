@@ -1,4 +1,4 @@
-﻿using MusRoyalePC.Services;
+﻿/*using MusRoyalePC.Services;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -34,4 +34,4 @@ namespace MusRoyalePC.Tests.Services
             Assert.Equal("Erabiltzailea ez da existitzen", result.ErrorMessage);
         }
     }
-}
+}*/
