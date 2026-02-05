@@ -21,10 +21,10 @@ jobs:
           dotnet-version: 9.0.x
 
       - name: Restore
-        run: dotnet restore MusRoyalePCBittor.sln
+        run: dotnet restore MusRoyalePC.sln
 
       - name: Build
-        run: dotnet build MusRoyalePCBittor.sln --no-restore
+        run: dotnet build MusRoyalePC.sln --no-restore
 
       - name: Test
-        run: dotnet test MusRoyalePCBittor.sln --no-build
+        run: dotnet test MusRoyalePC.sln --no-build
