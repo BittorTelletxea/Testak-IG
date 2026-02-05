@@ -1,17 +1,2 @@
 [Bb]in/
 [Ob]j/
-# Build Folders
-bin/
-obj/
-
-# User-specific files
-*.user
-*.suo
-
-# Rider / VSCode / JetBrains
-.idea/
-.vscode/
-
-
-
-obj/\nbin/\n*.json
